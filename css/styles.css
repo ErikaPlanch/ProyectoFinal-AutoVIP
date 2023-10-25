@@ -109,3 +109,14 @@ h6 {
   color: #eeeeee;
   text-decoration: none;
 }
+
+/* Sobre Nosotros Section */
+
+#aboutPhoto {
+  border: solid lightgrey 1px;
+}
+
+/* Classes:  */
+
+/* ids:
+  aboutPhoto */
