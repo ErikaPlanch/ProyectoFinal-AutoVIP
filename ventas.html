@@ -44,24 +44,47 @@
   </head>
 
   <body>
+    <div></div>
+
     <div class="container">
       <div class="row"><h3>Ventas</h3></div>
 
       <div class="row">
-        <div class="col-md-3 col-lg-1">
-          <div class="filter-section">
-            <h5>Flitro</h5>
-            <hr />
-            <h6>Año</h6>
-            <select name="año" id="años"></select>
-            <h6>Marca</h6>
-            <select name="marca" id="marcas"></select>
-            <h6>Modelo</h6>
-            <select name="modelo" id="modelos"></select>
-            <h6>Estado</h6>
-            <select name="estado" id="estados"></select>
-            <button>Filtrar</button>
+        <div class="col-md-3 col-lg-2">
+          <!-- filter -->
+
+          <div class="d-flex flex-column p-3 bg-light">
+            <div id="filterMain">
+              <div class="headerFilter"><h5>Flitro</h5></div>
+              <div class="divSelects">
+                <h6>Año</h6>
+                <select name="año" id="años"></select>
+                <h6>Marca</h6>
+                <select name="marca" id="marcas"></select>
+                <h6>Modelo</h6>
+                <select name="modelo" id="modelos"></select>
+                <h6>Estado</h6>
+                <select name="estado" id="estados"></select>
+              </div>
+
+              <button class="btn btnB btn-primary m-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  />
+                </svg>
+                Filtrar
+              </button>
+            </div>
           </div>
+          <!-- filter -->
         </div>
 
         <div class="car-section col-md-6 col-lg-3">
