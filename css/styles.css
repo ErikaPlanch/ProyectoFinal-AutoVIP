@@ -116,7 +116,45 @@ h6 {
   border: solid lightgrey 1px;
 }
 
-/* Classes:  */
+#buttonContacto {
+  border: solid lightgrey 1px;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Nuestro Equipo */
+
+.greyFont {
+  color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.peopleCardsDivs {
+  border: solid lightgrey 1px;
+  border-radius: 5px;
+}
+
+.ourTeamImgs {
+  object-fit: cover;
+}
+
+#cardsRowContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Classes:  
+  peopleCards
+  greyFont
+  peopleCardsDivs
+  ourTeamImgs*/
 
 /* ids:
-  aboutPhoto */
+  aboutPhoto
+  buttonContacto
+  cardsRowContainer*/
