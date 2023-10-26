@@ -40,10 +40,8 @@ h6 {
 
 #home {
   flex: 1;
-
-
 }
-#carouselExampleIndicators{
+#carouselExampleIndicators {
   height: 36vw;
   overflow: hidden;
 }
@@ -51,7 +49,6 @@ h6 {
   height: 35vh;
   overflow: hidden;
   border-bottom: 4px solid #ff8f00;
- ;
   background-size: cover;
   background-position: center center;
   background-image: url("../img/cars_home/audi_1.jpg");
@@ -134,20 +131,13 @@ h6 {
 /* Nuestro Equipo */
 
 .greyFont {
-  color: lightgray;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  color: gray;
 }
 
 .peopleCardsDivs {
   border: solid lightgrey 1px;
   border-radius: 5px;
-}
-
-.ourTeamImgs {
-  object-fit: cover;
+  text-align: center;
 }
 
 #cardsRowContainer {
@@ -155,11 +145,22 @@ h6 {
   justify-content: space-around;
 }
 
+.socialMediaLogos {
+  color: rgb(68, 118, 210);
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 /* Classes:  
   peopleCards
   greyFont
   peopleCardsDivs
-  ourTeamImgs*/
+  logoContainer
+  socialMediaLogos*/
 
 /* ids:
   aboutPhoto
