@@ -44,52 +44,74 @@
   </head>
 
   <body>
-    <div></div>
-
+    <nav id="header" class="navbar navbar-expand-md fixed-top navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            id="header-logo"
+            src="img/automotora_vip_logo.png"
+            alt="AutoVIP"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#links"
+          aria-controls="links"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="links" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="ventas.html">Venta 0km</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ventas.html">Venta Usados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#contacto-modal"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
     <div class="container">
       <div class="row"><h3>Ventas</h3></div>
 
       <div class="row">
-        <div class="col-md-3 col-lg-2">
-          <!-- filter -->
-
-          <div class="d-flex flex-column p-3 bg-light">
-            <div id="filterMain">
-              <div class="headerFilter"><h5>Flitro</h5></div>
-              <div class="divSelects">
-                <h6>Año</h6>
-                <select name="año" id="años"></select>
-                <h6>Marca</h6>
-                <select name="marca" id="marcas"></select>
-                <h6>Modelo</h6>
-                <select name="modelo" id="modelos"></select>
-                <h6>Estado</h6>
-                <select name="estado" id="estados"></select>
-              </div>
-
-              <button class="btn btnB btn-primary m-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-search"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                  />
-                </svg>
-                Filtrar
-              </button>
-            </div>
+        <div class="col-md-3 col-lg-1">
+          <div class="filter-section">
+            <h5>Flitro</h5>
+            <hr />
+            <h6>Año</h6>
+            <select name="año" id="años"></select>
+            <h6>Marca</h6>
+            <select name="marca" id="marcas"></select>
+            <h6>Modelo</h6>
+            <select name="modelo" id="modelos"></select>
+            <h6>Estado</h6>
+            <select name="estado" id="estados"></select>
+            <button>Filtrar</button>
           </div>
-          <!-- filter -->
         </div>
 
-        <div class="car-section col-md-6 col-lg-3">
+        <div class="col-md-9 col-lg-10">
           <div class="row">
-            <div class="col">
+            <div class="col-md-4 col-lg-4">
               <div class="card" style="width: 18rem">
                 <img
                   src="img/cars_sales/audi_q5_2017.jpg"
@@ -98,23 +120,20 @@
                 />
               </div>
             </div>
-            <div class="col">
+            <div class="col-md-6">
               <div class="car-title">
                 <h4>Audi Q5</h4>
                 <p>2017 | USD 92.000</p>
               </div>
               <div class="car-info">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Voluptate quis dolor eum, aperiam iusto impedit quae
-                  dignissimos pariatur voluptatem consequuntur maiores tenetur
-                  sapiente aspernatur deserunt molestiae molestias provident
-                  adipisci consectetur! Lorem ipsum dolor sit amet consectetur,
-                  adipisicing elit. Magnam et, quis quasi dicta, pariatur neque
-                  debitis numquam obcaecati placeat nesciunt aperiam eveniet
-                  libero deleniti laudantium asperiores nemo omnis dolorum
-                  consequuntur.
-                </p>
+                lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod Lorem, ipsum dolor sit amet consectetur adipisicing
+                elit. Aliquid eius fugit eveniet qui ea libero eum ipsam, error
+                maiores ratione molestiae enim tempore mollitia id sed. Quae
+                molestias sequi voluptas? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Possimus sint culpa voluptatum tempora cumque
+                enim dolores expedita! Nobis reprehenderit velit, qui nisi
+                voluptate dolore doloribus? Error autem doloremque enim aperiam?
               </div>
               <div class="car-buttons">
                 <button>Comprar</button>
