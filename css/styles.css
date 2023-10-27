@@ -38,7 +38,7 @@ h6 {
     HOME
 
 /*****************************************************************/
-
+/* 
 #home {
   flex: 1;
 }
@@ -54,7 +54,7 @@ h6 {
   background-position: center center;
   background-image: url("../img/cars_home/audi_1.jpg");
   margin-bottom: 30px;
-}
+} */
 
 #home h1 span {
   font-weight: 300;
@@ -132,20 +132,13 @@ h6 {
 /* Nuestro Equipo */
 
 .greyFont {
-  color: lightgray;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  color: gray;
 }
 
 .peopleCardsDivs {
   border: solid lightgrey 1px;
   border-radius: 5px;
-}
-
-.ourTeamImgs {
-  object-fit: cover;
+  text-align: center;
 }
 
 #cardsRowContainer {
@@ -255,6 +248,15 @@ h6 {
   height: 30px;
   margin-left: 5px;
 }
+.socialMediaLogos {
+  color: rgb(68, 118, 210);
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
 
 /* Classes:  
   peopleCards
@@ -266,6 +268,8 @@ h6 {
   comprar-button
   info-compartir-buttons
   */
+/* logoContainer */
+/* socialMediaLogos*/
 
 /* ids:
   aboutPhoto
