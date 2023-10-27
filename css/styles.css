@@ -5,6 +5,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 h1,
@@ -145,6 +146,108 @@ h6 {
   justify-content: space-around;
 }
 
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(211, 211, 211, 0.289);
+  border: solid 1px rgba(160, 158, 158, 0.145);
+  padding: 10px;
+}
+
+.filter-button {
+  color: white;
+  background-color: #ff8f00;
+  border: solid 1px rgb(162, 90, 1);
+}
+
+.top-hr {
+  width: 85vw;
+  text-align: center;
+}
+
+#car-year-price {
+  margin-left: 300px;
+}
+
+.comprar-button {
+  margin: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(99, 180, 99);
+  color: white;
+  border: solid 2px rgb(88, 167, 88);
+  border-radius: 5px;
+}
+
+.info-compartir-buttons {
+  margin: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: white;
+  border: solid 2px rgba(140, 138, 138, 0.526);
+  border-radius: 5px;
+}
+
+.main-section {
+  margin-top: 30px;
+}
+
+.audi-q5-info {
+  margin-left: 80px;
+}
+
+.car-info {
+  font-weight: 500;
+  font-size: medium;
+  width: 670px;
+}
+
+.card {
+  margin-left: 15px;
+}
+
+.car-title {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+}
+
+.filter-año,
+.filter-marca,
+.filter-modelo,
+.filter-estado,
+.filter-button {
+  font-weight: 900;
+}
+
+.filter-año {
+  margin-top: 8px;
+}
+
+.filter-marca,
+.filter-modelo,
+.filter-estado {
+  margin-top: 15px;
+}
+
+.filter-button {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.select-año,
+.select-marcas,
+.select-modelos,
+.select-estados {
+  border-radius: 5px;
+  width: 160px;
+  height: 30px;
+  margin-left: 5px;
+}
 .socialMediaLogos {
   color: rgb(68, 118, 210);
 }
@@ -159,10 +262,17 @@ h6 {
   peopleCards
   greyFont
   peopleCardsDivs
-  logoContainer
-  socialMediaLogos*/
+  ourTeamImgs
+  filter-section
+  main-section
+  comprar-button
+  info-compartir-buttons
+  */
+/* logoContainer */
+/* socialMediaLogos*/
 
 /* ids:
   aboutPhoto
   buttonContacto
-  cardsRowContainer*/
+  cardsRowContainer
+  car-year-price*/

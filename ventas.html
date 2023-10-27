@@ -23,6 +23,12 @@
       crossorigin="anonymous"
     />
 
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
     <!-- CSS Font Awesome -->
     <link
       rel="stylesheet"
@@ -88,42 +94,43 @@
         </div>
       </div>
     </nav>
-    
-    <div class="container">
-      <div class="row"><h3>Ventas</h3></div>
 
-      <div class="row">
-        <div class="col-md-3 col-lg-1">
+    <div class="container">
+      <div class="row"><h3 class="mt-3">Ventas</h3></div>
+      <hr class="top-hr" />
+      <div class="row main-section">
+        <div class="col-md-3 col-lg-2">
           <div class="filter-section">
-            <h5>Flitro</h5>
+            <h5 class="filter-title">Flitro</h5>
             <hr />
-            <h6>Año</h6>
-            <select name="año" id="años"></select>
-            <h6>Marca</h6>
-            <select name="marca" id="marcas"></select>
-            <h6>Modelo</h6>
-            <select name="modelo" id="modelos"></select>
-            <h6>Estado</h6>
-            <select name="estado" id="estados"></select>
-            <button>Filtrar</button>
+            <h6 class="filter-año">Año</h6>
+            <select name="año" id="años" class="select-año"></select>
+            <h6 class="filter-marca">Marca</h6>
+            <select name="marca" id="marcas" class="select-marcas"></select>
+            <h6 class="filter-modelo">Modelo</h6>
+            <select name="modelo" id="modelos" class="select-modelos"></select>
+            <h6 class="filter-estado">Estado</h6>
+            <select name="estado" id="estados" class="select-estados"></select>
+            <button class="filter-button">Filtrar</button>
           </div>
         </div>
 
-        <div class="col-md-9 col-lg-10">
-          <div class="row">
+        <div class="col-md-10 col-lg-10">
+          <div class="row audi-q5-card">
             <div class="col-md-4 col-lg-4">
-              <div class="card" style="width: 18rem">
+              <div class="card rounded-0" style="width: 25rem">
                 <img
                   src="img/cars_sales/audi_q5_2017.jpg"
-                  class="card-img-top"
+                  class="card-img-top rounded-0 p-1"
                   alt=""
                 />
               </div>
             </div>
-            <div class="col-md-6">
+
+            <div class="col-md-6 col-lg-6 audi-q5-info">
               <div class="car-title">
-                <h4>Audi Q5</h4>
-                <p>2017 | USD 92.000</p>
+                <h3>Audi Q5</h3>
+                <p id="car-year-price">2017 | USD 92.000</p>
               </div>
               <div class="car-info">
                 lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -135,10 +142,16 @@
                 enim dolores expedita! Nobis reprehenderit velit, qui nisi
                 voluptate dolore doloribus? Error autem doloremque enim aperiam?
               </div>
-              <div class="car-buttons">
-                <button>Comprar</button>
-                <button>Más Información</button>
-                <button>Compartir</button>
+              <div class="car-buttons mt-2">
+                <button class="comprar-button">
+                  <i class="bi bi-cart3"> </i>Comprar
+                </button>
+                <button class="info-compartir-buttons">
+                  <i class="bi bi-plus-square-dotted"> </i>Más Información
+                </button>
+                <button class="info-compartir-buttons">
+                  <i class="bi bi-share-fill"> </i>Compartir
+                </button>
               </div>
             </div>
           </div>
