@@ -115,36 +115,7 @@ h6 {
   text-decoration: none;
 }
 
-/* Sobre Nosotros Section */
-
-#aboutPhoto {
-  border: solid lightgrey 1px;
-}
-
-#buttonContacto {
-  border: solid lightgrey 1px;
-  color: black;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-/* Nuestro Equipo */
-
-.greyFont {
-  color: gray;
-}
-
-.peopleCardsDivs {
-  border: solid lightgrey 1px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-#cardsRowContainer {
-  display: flex;
-  justify-content: space-around;
-}
+/* Ventas */
 
 .filter-section {
   display: flex;
@@ -248,8 +219,36 @@ h6 {
   height: 30px;
   margin-left: 5px;
 }
-.socialMediaLogos {
-  color: rgb(68, 118, 210);
+
+/* Sobre Nosotros Section */
+
+#aboutPhoto {
+  border: solid lightgrey 1px;
+}
+
+#buttonContacto {
+  border: solid lightgrey 1px;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Nuestro Equipo */
+
+.greyFont {
+  color: gray;
+}
+
+.peopleCardsDivs {
+  border: solid lightgrey 1px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#cardsRowContainer {
+  display: flex;
+  justify-content: space-around;
 }
 
 .logoContainer {
@@ -267,9 +266,8 @@ h6 {
   main-section
   comprar-button
   info-compartir-buttons
-  */
-/* logoContainer */
-/* socialMediaLogos*/
+  logoContainer 
+  socialMediaLogos*/
 
 /* ids:
   aboutPhoto
