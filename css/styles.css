@@ -37,7 +37,7 @@ h6 {
     HOME
 
 /*****************************************************************/
-
+/* 
 #home {
   flex: 1;
 }
@@ -53,7 +53,7 @@ h6 {
   background-position: center center;
   background-image: url("../img/cars_home/audi_1.jpg");
   margin-bottom: 30px;
-}
+} */
 
 #home h1 span {
   font-weight: 300;
