@@ -104,57 +104,117 @@
             <h5 class="filter-title">Flitro</h5>
             <hr />
             <h6 class="filter-año">Año</h6>
-            <select name="año" id="años" class="select-año"></select>
+            <select name="año" id="años" class="select-año">
+              <option selected>Seleccionar...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
             <h6 class="filter-marca">Marca</h6>
-            <select name="marca" id="marcas" class="select-marcas"></select>
+            <select name="marca" id="marcas" class="select-marcas">
+              <option selected>Seleccionar...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
             <h6 class="filter-modelo">Modelo</h6>
-            <select name="modelo" id="modelos" class="select-modelos"></select>
+            <select name="modelo" id="modelos" class="select-modelos">
+              <option selected>Seleccionar...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
             <h6 class="filter-estado">Estado</h6>
-            <select name="estado" id="estados" class="select-estados"></select>
-            <button class="filter-button">Filtrar</button>
+            <select name="estado" id="estados" class="select-estados">
+              <option selected>Seleccionar...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <button class="filter-button">
+              <i class="bi bi-search"> Filtrar</i>
+            </button>
           </div>
         </div>
 
-        <div class="col-md-10 col-lg-10">
-          <div class="row audi-q5-card">
-            <div class="col-md-4 col-lg-4">
-              <div class="card rounded-0" style="width: 25rem">
-                <img
-                  src="img/cars_sales/audi_q5_2017.jpg"
-                  class="card-img-top rounded-0 p-1"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-6 audi-q5-info">
-              <div class="car-title">
-                <h3>Audi Q5</h3>
-                <p id="car-year-price">2017 | USD 92.000</p>
-              </div>
-              <div class="car-info">
-                lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod Lorem, ipsum dolor sit amet consectetur adipisicing
-                elit. Aliquid eius fugit eveniet qui ea libero eum ipsam, error
-                maiores ratione molestiae enim tempore mollitia id sed. Quae
-                molestias sequi voluptas? Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Possimus sint culpa voluptatum tempora cumque
-                enim dolores expedita! Nobis reprehenderit velit, qui nisi
-                voluptate dolore doloribus? Error autem doloremque enim aperiam?
-              </div>
-              <div class="car-buttons mt-2">
-                <button class="comprar-button">
-                  <i class="bi bi-cart3"> </i>Comprar
-                </button>
-                <button class="info-compartir-buttons">
-                  <i class="bi bi-plus-square-dotted"> </i>Más Información
-                </button>
-                <button class="info-compartir-buttons">
-                  <i class="bi bi-share-fill"> </i>Compartir
-                </button>
+        <div class="col-12 col-lg-9">
+          <div class="row">
+                <span class="badge">Nuevo</span>
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="img/cars_sales/audi_q5_2017.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8 ">
+                      <div class="card-body">
+                        <h5 class="card-title">Audi Q5</h5>
+                        <p class="card-text">2017 | USD 92.000</p>
+                        <p class="card-text">lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                          eiusmod Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Aliquid eius fugit eveniet qui ea libero eum ipsam, error
+                          maiores ratione molestiae enim tempore mollitia id sed. Quae
+                          molestias sequi voluptas? Lorem ipsum dolor sit amet consectetur
+                          adipisicing elit. Possimus sint culpa voluptatum tempora cumque
+                          enim dolores expedita! Nobis reprehenderit velit, qui nisi
+                          voluptate dolore doloribus? Error autem doloremque enim aperiam?<small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                          <div class="car-buttons">
+                            <button class="comprar-button">
+                              <i class="bi bi-cart3"> </i>Comprar
+                            </button>
+                            <button class="info-compartir-buttons">
+                              <i class="bi bi-plus-square-dotted"> </i>Más Información
+                            </button>
+                            <button class="info-compartir-buttons">
+                              <i class="bi bi-share-fill"> </i>Compartir
+                            </button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <hr class="middle-hr" />
+        </div>
+
+        <div class="col-md-10 col-lg-10 audi-card-2">
+          <div class="card" style="width: 25rem">
+            <img
+              src="img/cars_sales/audi_q7_2015.jpg"
+              class="card-img-top img-fluid"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6 audi-info-2">
+          <div class="car-title">
+            <h3>Audi Q7</h3>
+            <p id="car-year-price">2017 | USD 110.000</p>
+          </div>
+          <div class="car-info">
+            lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Aliquid eius fugit eveniet qui ea libero eum ipsam, error maiores
+            ratione molestiae enim tempore mollitia id sed. Quae molestias sequi
+            voluptas? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Possimus sint culpa voluptatum tempora cumque enim dolores expedita!
+            Nobis reprehenderit velit, qui nisi voluptate dolore doloribus?
+            Error autem doloremque enim aperiam?
+          </div>
+          <div class="car-buttons">
+            <button class="comprar-button">
+              <i class="bi bi-cart3"> </i>Comprar
+            </button>
+            <button class="info-compartir-buttons">
+              <i class="bi bi-plus-square-dotted"> </i>Más Información
+            </button>
+            <button class="info-compartir-buttons">
+              <i class="bi bi-share-fill"> </i>Compartir
+            </button>
+          </div>
+          <hr class="middle-hr" />
         </div>
       </div>
     </div>

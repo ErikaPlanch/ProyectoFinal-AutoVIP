@@ -158,15 +158,26 @@ h6 {
   color: white;
   background-color: #ff8f00;
   border: solid 1px rgb(162, 90, 1);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  width: 160px;
+  height: 30px;
+  margin-left: 5px;
 }
 
 .top-hr {
-  width: 85vw;
+  width: 1590px;
   text-align: center;
 }
 
+.middle-hr {
+  width: 1358px;
+  margin-left: 15px;
+}
+
 #car-year-price {
-  margin-left: 300px;
+  margin-left: 450px;
 }
 
 .comprar-button {
@@ -196,7 +207,7 @@ h6 {
   margin-top: 30px;
 }
 
-.audi-q5-info {
+.audi-info {
   margin-left: 80px;
 }
 
@@ -214,6 +225,11 @@ h6 {
   display: flex;
   flex-direction: row;
   width: 900px;
+}
+
+.audi-card {
+  display: flex;
+  flex-direction: row;
 }
 
 .filter-año,
@@ -234,19 +250,16 @@ h6 {
   margin-top: 15px;
 }
 
-.filter-button {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
 .select-año,
 .select-marcas,
 .select-modelos,
 .select-estados {
   border-radius: 5px;
+  border: solid 1px rgba(105, 104, 104, 0.505);
   width: 160px;
-  height: 30px;
+  height: 35px;
   margin-left: 5px;
+  padding-left: 5px;
 }
 .socialMediaLogos {
   color: rgb(68, 118, 210);
@@ -256,6 +269,31 @@ h6 {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+
+.card {
+  border-radius: 0px;
+}
+
+.card-img-top {
+  border-radius: 0px;
+}
+
+.car-buttons {
+  margin-top: 15px;
+}
+
+.badge {
+  background-color: #ff8f00;
+  position: absolute;
+  top: 16px;
+  left: 13px;
+}
+
+.bi-search {
+  font-weight: lighter;
+  font-size: small;
+  font-style: normal;
 }
 
 /* Classes:  
