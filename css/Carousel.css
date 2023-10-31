@@ -1,28 +1,27 @@
 .home-intro  {
-    overflow: hidden;
-      border-bottom: 4px solid #ff8f00;
-    height: 36vw;
+ 
+      
+   
       background-size: cover;
       background-position: center center;
      
-      margin-bottom: 30px;
-    }.home-intro img{
-      position: relative;
-    
-      width: 100%;
-    }
-     .home-intro .imgAutos{
-      height: 500px;
-     }
-     .algoCont{
-      display: flex;
-      justify-content: center;
-      border: 1px red solid;
-     }
-    .algo{
-      display: flex;
       
-    position: relative;
-    z-index: 1;
+    }
     
+
+    #carInner{
+      border-bottom: 4px solid #ff8f00;
+      height: 35vw;
+    }
+
+    .carousel-item {
+      height: 100%;
+     position: relative;
+     
+    }
+    @media (max-width: 767px){
+      .carousel-caption{
+        
+              display: none;
+      }
     }
