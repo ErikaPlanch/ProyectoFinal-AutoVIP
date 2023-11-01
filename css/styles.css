@@ -116,10 +116,11 @@ h6 {
 }
 
 /* Ventas */
-
 .filter-section {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   background-color: rgba(211, 211, 211, 0.289);
   border: solid 1px rgba(160, 158, 158, 0.145);
   padding: 10px;
@@ -137,44 +138,53 @@ h6 {
   margin-left: 5px;
 }
 
-.top-hr {
-  width: 1590px;
+.badge {
+  background-color: #ff8f00;
+  border: solid 1px rgba(162, 89, 1, 0.512);
+  position: absolute;
+  border-radius: 3px;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  padding-right: 6px;
+  padding-left: 6px;
+  margin: 30px;
+}
+
+.filter-hr {
+  width: 175px;
   text-align: center;
 }
 
-.middle-hr {
-  width: 1358px;
-  margin-left: 15px;
-}
-
-#car-year-price {
-  margin-left: 100px;
-  width: 1000px;
+.top-hr {
+  width: 1300px;
+  text-align: center;
 }
 
 .comprar-button {
-  margin: 1px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  margin-right: 3px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   background-color: rgb(99, 180, 99);
   color: white;
   border: solid 2px rgb(88, 167, 88);
-  border-radius: 5px;
-  height: 40px;
+  border-radius: 4px;
+  height: 37px;
+  font-size: small;
 }
 
 .info-compartir-buttons {
-  margin: 1px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  margin-right: 3px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   background-color: white;
   border: solid 2px rgba(140, 138, 138, 0.526);
-  border-radius: 5px;
-  height: 40px;
+  border-radius: 4px;
+  height: 37px;
+  font-size: small;
 }
 
 .card-buttons {
@@ -185,6 +195,7 @@ h6 {
 .card-header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .main-section {
@@ -192,18 +203,19 @@ h6 {
 }
 
 .card-description {
-  margin-left: 80px;
   padding: 10px;
+  padding-left: 55px;
 }
 
-.car-info {
-  font-weight: 500;
+.card-info {
   font-size: medium;
+  margin-top: 10px;
 }
 
 .car {
   border: solid 1px rgba(89, 89, 89, 0.173);
   padding: 6px;
+  margin: 20px;
 }
 
 .card {
@@ -240,7 +252,6 @@ h6 {
 .select-estados {
   border-radius: 5px;
   border: solid 1px rgba(105, 104, 104, 0.505);
-  width: 160px;
   height: 35px;
   margin-left: 5px;
   padding-left: 5px;

@@ -114,12 +114,13 @@
       <div class="row main-section">
         <!-- Filter section -->
 
-        <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="col-sx-12 col-sm-6 col-md-4">
           <div class="filter-section">
-            <h5 class="filter-title">Flitro</h5>
-
-            <!-- Línea divisoria -->
-            <hr />
+            <div class="filter-title">
+              <h4>Flitro</h4>
+              <!-- Línea divisoria -->
+              <hr class="filter-hr" />
+            </div>
 
             <label class="filter-año">Año</label>
             <select name="año" id="años" class="select-año"></select>
@@ -134,28 +135,37 @@
         </div>
 
         <!-- Cards Columna -->
-        <div class="col-sm-10 col-md-8 col-lg-10">
+        <div id="cardColumn" class="col-sm-10 col-md-8 col-lg-10">
           <!-- Card 1 -->
           <div class="card mb-3">
             <div class="row g-0">
-              <div class="col-6 col-lg-4">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-lg-4">
                 <img
                   src="img/cars_sales/audi_q5_2017.jpg"
                   class="car img-fluid"
                   alt="..."
                 />
+                <span class="badge">Nuevo</span>
               </div>
-              <div class="col-md-6 col-lg-6 card-info">
+              <div class="col-md-6 col-lg-8 card-info">
                 <div class="card-description">
                   <div class="card-header">
-                    <h3 class="card-title">Audi Q5</h3>
-                    <p id="car-year-price">2017 | USD 92.000 |</p>
+                    <div class="title-container">
+                      <h3 class="card-title">Audi Q5</h3>
+                    </div>
+                    <div class="subTitle-container">
+                      <p>2017 | USD 92.000 |</p>
+                    </div>
                   </div>
                   <p class="card-info">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Maxime odio consequatur nostrum facilis eius quasi possimus
-                    provident doloribus aliquid? Totam commodi molestias fugiat
-                    earum omnis deserunt corrupti doloribus voluptatem. Illum.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
                   </p>
                   <div class="card-buttons mt-2">
                     <button class="comprar-button">
@@ -173,9 +183,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Línea divisoria -->
-        <hr class="middle-hr" />
       </div>
     </div>
 
@@ -286,6 +293,8 @@
         </div>
       </div>
     </div>
+
+    @media (min-width: 576px) { }
 
     <!-- Boostrap -->
     <script

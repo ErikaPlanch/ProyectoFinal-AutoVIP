@@ -3,14 +3,14 @@ const brandSelector = document.querySelector("#brands");
 const modelSelector = document.querySelector("#models");
 const statusSelector = document.querySelector("#status");
 
-const mainSection = document.querySelector("#cardColum")
+const cardColumn = document.querySelector("#cardColumn")
 
 const DataCards = []
 
 
-for (let i = 1900; i <= 2023; i++) {
-  yearSelector.insertAdjacentHTML += `<option value="${i}">${i}</option>`;
-}
+// for (let i = 1900; i <= 2023; i++) {
+  // yearSelector.insertAdjacentHTML += `<option value="${i}">${i}</option>`;
+// }
 
 // Autos
 
@@ -21,7 +21,7 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
   .then(function (json) {
     json.forEach(element => {
     
-mainSection.innerHTML += `
+      cardColumn.innerHTML += `
 <div class="card mb-3">
 <div class="row g-0">
   <div class="col-6 col-lg-4">
