@@ -114,25 +114,35 @@
       <div class="row main-section">
         <!-- Filter section -->
 
-        <div class="col-sx-12 col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-4 col-lg-2">
           <div class="filter-section">
-            <div class="filter-title">
-              <h4>Flitro</h4>
-              <!-- Línea divisoria -->
-              <hr class="filter-hr" />
-            </div>
+            <h5 class="filter-title">Flitro</h5>
+
+            <!-- Línea divisoria -->
+            <hr />
 
             <label class="filter-año">Año</label>
-            <select name="año" id="años" class="select-año"></select>
+            <select name="año" id="yearsSelect" class="select-año">
+              <option>selection</option>
+            </select>
             <label class="filter-marca">Marca</label>
-            <select name="marca" id="marcas" class="select-marcas"></select>
+            <select name="marca" id="brands"  class="select-marcas">
+              <option>selection</option>
+            </select>
             <label class="filter-modelo">Modelo</label>
-            <select name="modelo" id="modelos" class="select-modelos"></select>
+            <select name="modelo" id="models"  class="select-modelos">
+              <option>selection</option>
+            </select>
             <label class="filter-estado">Estado</label>
-            <select name="estado" id="estados" class="select-estados"></select>
-            <button class="filter-button">Filtrar</button>
+            <select name="estado" id="status" class="select-estados">
+              <option>selection</option>
+            </select>
+            <button
+
+   class="filter-button">Filtrar</button>
           </div>
         </div>
+
 
         <!-- Cards Columna -->
         <div id="cardColumn" class="col-sm-10 col-md-8 col-lg-10">
