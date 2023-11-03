@@ -21,10 +21,10 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
       cardColumn.innerHTML += `
 <div class="card mb-3">
 <div class="row g-0">
-  <div class="col-6 col-lg-4">
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-lg-4">
     <img
       src="${element.image}"
-      class="img-fluid"
+      class="car img-fluid"
       alt="..."
     />
   </div>
