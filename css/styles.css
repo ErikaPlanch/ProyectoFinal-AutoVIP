@@ -38,23 +38,7 @@ h6 {
     HOME
 
 /*****************************************************************/
-/* 
-#home {
-  flex: 1;
-}
-#carouselExampleIndicators {
-  height: 36vw;
-  overflow: hidden;
-}
-#home-intro {
-  height: 35vh;
-  overflow: hidden;
-  border-bottom: 4px solid #ff8f00;
-  background-size: cover;
-  background-position: center center;
-  background-image: url("../img/cars_home/audi_1.jpg");
-  margin-bottom: 30px;
-} */
+
 
 #home h1 span {
   font-weight: 300;
@@ -156,7 +140,7 @@ h6 {
 }
 
 .top-hr {
-  width: 1300px;
+  width: 100%;
   text-align: center;
 }
 
@@ -192,20 +176,24 @@ h6 {
   flex-direction: row;
 }
 
-.card-header {
+.cardDates {
   display: flex;
+
+
   flex-direction: row;
+  background-color: #ffffff;
   justify-content: space-between;
+  padding: 2px;
 }
 
 .main-section {
   margin-top: 30px;
 }
 
-.card-description {
-  padding: 10px;
-  padding-left: 55px;
+#contenido-card{
+  padding-left: 20px;
 }
+
 
 .card-info {
   font-size: medium;
@@ -220,7 +208,7 @@ h6 {
 
 .card {
   margin-left: 15px;
-  padding: 10px;
+ padding-bottom: 15px;
 }
 
 .audi-card {
@@ -336,3 +324,11 @@ h6 {
   buttonContacto
   cardsRowContainer
   car-year-price*/
+
+
+/* stars */
+.subTitle-container{
+  display: flex;
+  width:35%;
+ 
+}
