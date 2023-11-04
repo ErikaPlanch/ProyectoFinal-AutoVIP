@@ -151,13 +151,7 @@ h6 {
 }
 
 .filter-hr {
-  width: 175px;
-  text-align: center;
-}
-
-.top-hr {
-  width: 1300px;
-  text-align: center;
+  width: 100%;
 }
 
 .comprar-button {
@@ -233,20 +227,22 @@ h6 {
 .filter-modelo,
 .filter-estado,
 .filter-button {
-  font-weight: 900;
+  font-weight: 700;
 }
 
-.filter-año {
-  margin-top: 8px;
+.filter-button {
+  width: 95%;
 }
 
 .filter-marca,
 .filter-modelo,
+.filter-año,
 .filter-estado {
   margin-top: 15px;
+  padding-left: 5px;
 }
 
-.select-año,
+.select-años,
 .select-marcas,
 .select-modelos,
 .select-estados {
@@ -255,6 +251,7 @@ h6 {
   height: 35px;
   margin-left: 5px;
   padding-left: 5px;
+  width: 95%;
 }
 
 /* Sobre Nosotros Section */
@@ -329,7 +326,8 @@ h6 {
   comprar-button
   info-compartir-buttons
   logoContainer 
-  socialMediaLogos*/
+  socialMediaLogos
+  submitButton*/
 
 /* ids:
   aboutPhoto
