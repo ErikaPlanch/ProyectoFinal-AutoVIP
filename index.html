@@ -343,7 +343,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form action="https://formspree.io/f/mdorjzav" method="POST">
+            <form>
               <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input
@@ -352,7 +352,6 @@
                   value=""
                   class="form-control"
                   placeholder="Ingresar nombre completo..."
-                  required
                 />
               </div>
               <div class="mb-3">
@@ -363,7 +362,6 @@
                   value=""
                   class="form-control"
                   placeholder="Ingresar Email..."
-                  required
                 />
               </div>
               <div class="mb-3">
@@ -374,18 +372,18 @@
                   cols="40"
                   class="form-control"
                   placeholder="Ingresar mensaje..."
-                  required
                 ></textarea>
               </div>
-              <hr />
-              <button
-                type="submit"
-                class="btn btn-success submitButton"
-                data-bs-dismiss="modal"
-              >
-                Enviar
-              </button>
             </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Enviar
+            </button>
           </div>
         </div>
       </div>

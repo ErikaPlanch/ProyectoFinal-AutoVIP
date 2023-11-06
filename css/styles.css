@@ -38,7 +38,23 @@ h6 {
     HOME
 
 /*****************************************************************/
-
+/* 
+#home {
+  flex: 1;
+}
+#carouselExampleIndicators {
+  height: 36vw;
+  overflow: hidden;
+}
+#home-intro {
+  height: 35vh;
+  overflow: hidden;
+  border-bottom: 4px solid #ff8f00;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("../img/cars_home/audi_1.jpg");
+  margin-bottom: 30px;
+} */
 
 #home h1 span {
   font-weight: 300;
@@ -136,7 +152,13 @@ h6 {
 }
 
 .filter-hr {
-  width: 100%;
+  width: 175px;
+  text-align: center;
+}
+
+.top-hr {
+  width: 1300px;
+  text-align: center;
 }
 
 .comprar-button {
@@ -171,14 +193,10 @@ h6 {
   flex-direction: row;
 }
 
-.cardDates {
+.card-header {
   display: flex;
-
-
   flex-direction: row;
-  background-color: #ffffff;
   justify-content: space-between;
-  padding: 2px;
 }
 
 .main-section {
@@ -192,7 +210,6 @@ h6 {
   padding: 10px;
 }
 
-
 .card-info {
   font-size: medium;
   margin-top: 10px;
@@ -204,7 +221,7 @@ h6 {
 
 .card {
   margin-left: 15px;
- padding-bottom: 15px;
+  padding: 10px;
 }
 
 .audi-card {
@@ -217,22 +234,20 @@ h6 {
 .filter-modelo,
 .filter-estado,
 .filter-button {
-  font-weight: 700;
+  font-weight: 900;
 }
 
-.filter-button {
-  width: 95%;
+.filter-año {
+  margin-top: 8px;
 }
 
 .filter-marca,
 .filter-modelo,
-.filter-año,
 .filter-estado {
   margin-top: 15px;
-  padding-left: 5px;
 }
 
-.select-años,
+.select-año,
 .select-marcas,
 .select-modelos,
 .select-estados {
@@ -241,7 +256,6 @@ h6 {
   height: 35px;
   margin-left: 5px;
   padding-left: 5px;
-  width: 95%;
 }
 
 /* Sobre Nosotros Section */
@@ -317,19 +331,10 @@ h6 {
   comprar-button
   info-compartir-buttons
   logoContainer 
-  socialMediaLogos
-  submitButton*/
+  socialMediaLogos*/
 
 /* ids:
   aboutPhoto
   buttonContacto
   cardsRowContainer
   car-year-price*/
-
-
-/* stars */
-.subTitle-container{
-  display: flex;
-  width:35%;
- 
-}

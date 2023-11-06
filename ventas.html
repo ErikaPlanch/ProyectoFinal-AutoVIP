@@ -37,7 +37,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-   
+
     <!-- CSS Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
@@ -47,7 +47,7 @@
 
     <!-- CSS Propio -->
     <link rel="stylesheet" href="css/styles.css" />
-   
+    <link rel="stylesheet" href="css/styles2.css" />
   </head>
   <body>
     <!-- NavBar -->
@@ -107,20 +107,23 @@
       </div>
 
       <!-- Línea divisoria -->
-      <hr />
+      <hr class="top-hr" />
 
       <!-- Row de Filter y Cards -->
 
       <div class="row main-section">
         <!-- Filter section -->
 
-        <div class="col-sm-6 col-md-4 col-lg-2 pb-2">
+        <div class="col-sm-6 col-md-4 col-lg-2">
           <div class="filter-section">
             <h5 class="filter-title">Flitro</h5>
-            <hr class="m-1 filter-hr" />
+
+            <!-- Línea divisoria -->
+            <hr />
+
             <label class="filter-año">Año</label>
-            <select name="año" id="yearsSelect" class="select-años">
-              <option>Selección</option>
+            <select name="año" id="yearsSelect" class="select-año">
+              <option>selection</option>
             </select>
             <label class="filter-marca">Marca</label>
             <select name="marca" id="brands" class="select-marcas">
@@ -132,14 +135,14 @@
             </select>
             <label class="filter-estado">Estado</label>
             <select name="estado" id="status" class="select-estados">
-              <option>Selección</option>
+              <option>selection</option>
             </select>
             <button class="filter-button">Filtrar</button>
           </div>
         </div>
 
         <!-- Cards Columna -->
-        <div id="cardColumn" class="col-sm-12 col-md-8 col-lg-10">
+        <div id="cardColumn" class="col-sm-10 col-md-8 col-lg-10">
           <!-- Card 1 -->
           <div class="card mb-3">
             <div class="row g-0">
@@ -252,7 +255,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form action="https://formspree.io/f/mdorjzav" method="POST">
+            <form>
               <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input
@@ -261,7 +264,6 @@
                   value=""
                   class="form-control"
                   placeholder="Ingresar nombre completo..."
-                  required
                 />
               </div>
               <div class="mb-3">
@@ -272,7 +274,6 @@
                   value=""
                   class="form-control"
                   placeholder="Ingresar Email..."
-                  required
                 />
               </div>
               <div class="mb-3">
@@ -283,22 +284,24 @@
                   cols="40"
                   class="form-control"
                   placeholder="Ingresar mensaje..."
-                  required
                 ></textarea>
               </div>
-              <hr />
-              <button
-                type="submit"
-                class="btn btn-success submitButon"
-                data-bs-dismiss="modal"
-              >
-                Enviar
-              </button>
             </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Enviar
+            </button>
           </div>
         </div>
       </div>
     </div>
+
+    @media (min-width: 576px) { }
 
     <!-- Boostrap -->
     <script
