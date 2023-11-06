@@ -47,7 +47,6 @@
 
     <!-- CSS Propio -->
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/styles2.css" />
   </head>
   <body>
     <!-- NavBar -->
@@ -135,7 +134,9 @@
             </select>
             <label class="filter-estado">Estado</label>
             <select name="estado" id="status" class="select-estados">
-              <option>selection</option>
+              <option>Selección</option>
+              <option value="Nuevo">Nuevo</option>
+              <option value="Usado">Usado</option>
             </select>
             <button class="filter-button">Filtrar</button>
           </div>
@@ -144,51 +145,6 @@
         <!-- Cards Columna -->
         <div id="cardColumn" class="col-sm-10 col-md-8 col-lg-10">
           <!-- Card 1 -->
-          <div class="card mb-3">
-            <div class="row g-0">
-              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-lg-4">
-                <img
-                  src="img/cars_sales/audi_q5_2017.jpg"
-                  class="car w-100 h-100 object-fit-cover"
-                  alt="..."
-                />
-                <span class="badge">Nuevo</span>
-              </div>
-              <div class="col-md-6 col-lg-8 card-info">
-                <div class="card-description">
-                  <div class="card-header">
-                    <div class="title-container">
-                      <h3 class="card-title">Audi Q5</h3>
-                    </div>
-                    <div class="subTitle-container">
-                      <p>2017 | USD 92.000 |</p>
-                    </div>
-                  </div>
-                  <p class="card-info">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </p>
-                  <div class="card-buttons mt-2">
-                    <button class="comprar-button">
-                      <i class="bi bi-cart3"> </i>Comprar
-                    </button>
-                    <button class="info-compartir-buttons">
-                      <i class="bi bi-plus-square-dotted"> </i>Más Información
-                    </button>
-                    <button class="info-compartir-buttons">
-                      <i class="bi bi-share-fill"> </i>Compartir
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -255,7 +211,11 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form
+              action="https://formspree.io/f/mdorjzav"
+              method="POST"
+              class="modalForm"
+            >
               <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input
