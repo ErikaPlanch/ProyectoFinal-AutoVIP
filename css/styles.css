@@ -138,40 +138,42 @@ h6 {
 }
 
 .comprar-button {
-  margin-right: 3px;
-  padding-left: 9px;
-  padding-right: 9px;
-  padding-top: 4px;
-  padding-bottom: 4px;
   background-color: rgb(99, 180, 99);
   color: white;
   border: solid 2px rgb(88, 167, 88);
   border-radius: 4px;
-  height: 37px;
+  height: 33px;
+  width: 87px;
   font-size: small;
+  margin-right: 3px;
 }
 
-.info-compartir-buttons {
-  margin-right: 3px;
-  padding-left: 9px;
-  padding-right: 9px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+.info-buttons {
   background-color: white;
   border: solid 2px rgba(140, 138, 138, 0.526);
   border-radius: 4px;
-  height: 37px;
+  height: 33px;
+  font-size: small;
+  margin-right: 3px;
+}
+
+.compartir-buttons {
+  background-color: white;
+  border: solid 2px rgba(140, 138, 138, 0.526);
+  border-radius: 4px;
+  height: 33px;
+  width: 90px;
   font-size: small;
 }
 
 .card-buttons {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .cardDates {
   display: flex;
-
   flex-direction: row;
   background-color: #ffffff;
   justify-content: space-between;
@@ -193,8 +195,8 @@ h6 {
 
 .car {
   border: solid 1px rgba(89, 89, 89, 0.173);
-  padding: 6px;
-  margin: 20px;
+  padding: 9px;
+  margin: 15px;
 }
 
 .card {
@@ -324,5 +326,59 @@ h6 {
 /* stars */
 .subTitle-container {
   display: flex;
-  width: 35%;
+  font-size: medium;
+}
+
+@media only screen and (max-width: 600px) {
+  .subTitle-container {
+    font-size: small;
+  }
+  .car {
+    margin: 0;
+    object-fit: cover;
+    width: 100vw;
+  }
+  .card-info {
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .card-title {
+    font-size: large;
+  }
+  .subTitle-container {
+    font-size: smaller;
+  }
+  .comprar-button {
+    height: 33px;
+    width: 87px;
+    font-size: smaller;
+    margin-right: 3px;
+  }
+  .info-buttons {
+    height: 33px;
+    width: 130px;
+    font-size: smaller;
+    margin-right: 3px;
+  }
+  .compartir-buttons {
+    height: 33px;
+    width: 90px;
+    font-size: smaller;
+  }
+  .card-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card-title {
+    font-size: large;
+  }
+  .subTitle-container {
+    font-size: small;
+  }
 }
