@@ -8,7 +8,8 @@ const valorActualDeBrand = "";
 
 const DataCards = [];
 
-const star = `<i class="bi bi-star-fill"> </i>`;
+const star =  `<img src="img/cars_sales/star_rating.svg" alt="Search Icon" />`
+const starWhite = `<img src="img/cars_sales/star_rating-withe.svg" alt="Search Icon" />`;
 
 // Autos
 
@@ -18,6 +19,19 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
   })
   .then(function (json) {
     json.forEach((element) => {
+let contenedorStars =""
+for (let i = 0; i < element.rating; i++) {
+ contenedorStars += star
+  
+}
+let contadorRating = 5-element.rating
+  for (let i = 0; i < contadorRating; i++) {
+    contenedorStars += starWhite
+     
+   }
+
+
+
       cardColumn.innerHTML += `
 <div class="card mb-3">
 <div class="row d-flex justify-content-center ">
@@ -37,7 +51,7 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
     <h5 class="card-title">${element.model}</h5>
 
     <div class="subTitle-container">
-    <p>${element.year} | USD ${element.price_usd} | <p>  ${star}</p>
+    <p>${element.year} | USD ${element.price_usd} | <p>  ${contenedorStars}</p>
   
 
      
@@ -118,11 +132,8 @@ brandSelector.addEventListener("change", function () {
 
 /* status */
 
-for (i = 0; i <= 1; i++) {
-  const option = document.createElement("option");
-  option.text = i;
-  statusSelector.add(option);
-}
+ 
+
 
 /* status */
 
@@ -130,11 +141,6 @@ for (i = 0; i <= 1; i++) {
 
 /* year */
 
-for (i = 1900; i <= 2023; i++) {
-  const option = document.createElement("option");
-  option.text = i;
-  yearSelector.add(option);
-}
 
 /* year */
 
