@@ -8,7 +8,7 @@ const valorActualDeBrand = "";
 
 const DataCards = [];
 
-const star =  `<img src="img/cars_sales/star_rating.svg" alt="Search Icon" />`
+const star = `<img src="img/cars_sales/star_rating.svg" alt="Search Icon" />`;
 const starWhite = `<img src="img/cars_sales/star_rating-withe.svg" alt="Search Icon" />`;
 
 // Autos
@@ -19,18 +19,14 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
   })
   .then(function (json) {
     json.forEach((element) => {
-let contenedorStars =""
-for (let i = 0; i < element.rating; i++) {
- contenedorStars += star
-  
-}
-let contadorRating = 5-element.rating
-  for (let i = 0; i < contadorRating; i++) {
-    contenedorStars += starWhite
-     
-   }
-
-
+      let contenedorStars = "";
+      for (let i = 0; i < element.rating; i++) {
+        contenedorStars += star;
+      }
+      let contadorRating = 5 - element.rating;
+      for (let i = 0; i < contadorRating; i++) {
+        contenedorStars += starWhite;
+      }
 
       cardColumn.innerHTML += `
 <div class="card mb-3">
@@ -132,15 +128,17 @@ brandSelector.addEventListener("change", function () {
 
 /* status */
 
- 
-
-
 /* status */
 
 /* filtro */
 
 /* year */
 
+for (let i = 2023; i >= 1900; i--) {
+  const option = document.createElement("option");
+  option.text = i;
+  yearSelector.add(option);
+}
 
 /* year */
 
