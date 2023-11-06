@@ -37,7 +37,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-   
+
     <!-- CSS Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
@@ -47,7 +47,6 @@
 
     <!-- CSS Propio -->
     <link rel="stylesheet" href="css/styles.css" />
-   
   </head>
   <body>
     <!-- NavBar -->
@@ -133,6 +132,8 @@
             <label class="filter-estado">Estado</label>
             <select name="estado" id="status" class="select-estados">
               <option>Selección</option>
+              <option value="Nuevo">Nuevo</option>
+              <option value="Usado">Usado</option>
             </select>
             <button class="filter-button">
               <img src="img/cars_sales/searchIcon.svg" alt="Search Icon" />
@@ -144,7 +145,6 @@
         <!-- Cards Columna -->
         <div id="cardColumn" class="col-sm-12 col-md-8 col-lg-10">
           <!-- Card 1 -->
-         
         </div>
       </div>
     </div>
@@ -211,7 +211,11 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form action="https://formspree.io/f/mdorjzav" method="POST">
+            <form
+              action="https://formspree.io/f/mdorjzav"
+              method="POST"
+              class="modalForm"
+            >
               <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input

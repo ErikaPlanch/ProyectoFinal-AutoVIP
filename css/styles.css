@@ -39,7 +39,6 @@ h6 {
 
 /*****************************************************************/
 
-
 #home h1 span {
   font-weight: 300;
 }
@@ -173,7 +172,6 @@ h6 {
 .cardDates {
   display: flex;
 
-
   flex-direction: row;
   background-color: #ffffff;
   justify-content: space-between;
@@ -184,10 +182,9 @@ h6 {
   margin-top: 30px;
 }
 
-#contenido-card{
+#contenido-card {
   padding-left: 20px;
 }
-
 
 .card-info {
   font-size: medium;
@@ -202,7 +199,7 @@ h6 {
 
 .card {
   margin-left: 15px;
- padding-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .audi-card {
@@ -315,7 +312,8 @@ h6 {
   info-compartir-buttons
   logoContainer 
   socialMediaLogos
-  submitButton*/
+  submitButton
+  modalForm*/
 
 /* ids:
   aboutPhoto
@@ -323,10 +321,8 @@ h6 {
   cardsRowContainer
   car-year-price*/
 
-
 /* stars */
-.subTitle-container{
+.subTitle-container {
   display: flex;
-  width:35%;
- 
+  width: 35%;
 }
