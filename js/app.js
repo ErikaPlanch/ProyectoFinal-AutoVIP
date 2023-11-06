@@ -8,6 +8,10 @@ const valorActualDeBrand = "";
 
 const DataCards = [];
 
+const star = `<i class="bi bi-star-fill">`;
+
+const DataCards = [];
+
 // Autos
 
 fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
@@ -18,17 +22,35 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
     json.forEach((element) => {
       cardColumn.innerHTML += `
 <div class="card mb-3">
-<div class="row g-0">
-  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-lg-4">
+<div class="row d-flex justify-content-center ">
+
+  <div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
     <img
       src="${element.image}"
       class="car img-fluid"
       alt="..."
     />
+      
   </div>
-  <div class="col-md-6 col-lg-6 card-info">
+
+  <div id="contenido-card" class=" col-md-6 col-lg-8 card-info">
     <div class="card-description">
-      <h5 class="card-title">${element.model}</h5>
+    <div  class = "cardDates ">
+    <h5 class="card-title">${element.model}</h5>
+
+    <div class="subTitle-container">
+    <p>${element.year} | USD ${element.price_usd} | <p>  ${star}</p>
+  
+
+     
+    </p>
+
+  </div>
+    </div>
+
+     
+    </div>
+
       <p class="card-info">${element.description}
       </p>
       <div class="card-buttons mt-2">
