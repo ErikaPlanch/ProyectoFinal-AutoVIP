@@ -8,9 +8,7 @@ const valorActualDeBrand = "";
 
 const DataCards = [];
 
-const star = `<i class="bi bi-star-fill">`;
-
-const DataCards = [];
+const star = `<i class="bi bi-star-fill"> </i>`;
 
 // Autos
 
