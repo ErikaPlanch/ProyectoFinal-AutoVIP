@@ -11,7 +11,7 @@ const DataCards = [];
 const star = `<img src="img/cars_sales/star_rating.svg" alt="Search Icon" />`;
 const starWhite = `<img src="img/cars_sales/star_rating-withe.svg" alt="Search Icon" />`;
 
-// Autos
+// Cars
 
 fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
   .then(function (res) {
@@ -82,7 +82,9 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
     console.log("Error");
   });
 
-// Marcas
+// Filter
+
+// Brands
 
 fetch("https://ha-front-api-proyecto-final.vercel.app/brands")
   .then(function (res) {
@@ -100,7 +102,7 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/brands")
     console.log("Error");
   });
 
-// Modelos
+// Models
 
 brandSelector.addEventListener("change", function () {
   fetch(
@@ -126,13 +128,7 @@ brandSelector.addEventListener("change", function () {
     });
 });
 
-/* status */
-
-/* status */
-
-/* filtro */
-
-/* year */
+// Years
 
 for (let i = 2023; i >= 1900; i--) {
   const option = document.createElement("option");
@@ -140,19 +136,23 @@ for (let i = 2023; i >= 1900; i--) {
   yearSelector.add(option);
 }
 
-/* year */
+// Modal
 
-/* filtro */
-
-/* formulario logic */
+// Form
 
 const submitButton = document.querySelector(".submitButton");
+const valorInputName = document.querySelector(".valorInputName");
+const valorInputMail = document.querySelector(".valorInputMail");
+const valorInputMessage = document.querySelector(".valueInputMessage");
 
-submitButton.addEventListener("submit", function () {
-  for (const form of document.getElementsByTagName("form")) {
-    form.reset();
+submitButton.addEventListener("click", function () {
+  if (
+    valorInputName.value === "" ||
+    valorInputMail.value === "" ||
+    valorInputMessage.value
+  ) {
+    alert("Complete todos los campos antes de enviar.");
   }
+  valorInput.value = "";
+  console.log(valorInput.value);
 });
-/* formulario logic */
-
-/* modelo selecion actual */
