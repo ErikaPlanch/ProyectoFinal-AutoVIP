@@ -98,28 +98,29 @@ h6 {
   text-decoration: none;
 }
 
-/* Ventas */
-.filter-section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  background-color: rgba(211, 211, 211, 0.289);
-  border: solid 1px rgba(160, 158, 158, 0.145);
-  padding: 10px;
+/* Carousel */
+
+.home-intro {
+  background-size: cover;
+  background-position: center center;
 }
 
-.filter-button {
-  color: white;
-  background-color: #ff8f00;
-  border: solid 1px rgb(162, 90, 1);
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border-radius: 3px;
-  width: 160px;
-  height: 30px;
-  margin-left: 5px;
+#carInner {
+  border-bottom: 4px solid #ff8f00;
+  height: 35vw;
 }
+
+.carousel-item {
+  height: 100%;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .carousel-caption {
+    display: none;
+  }
+}
+
+/* Ventas */
 
 .badge {
   background-color: #ff8f00;
@@ -133,8 +134,21 @@ h6 {
   margin: 30px;
 }
 
-.filter-hr {
-  width: 100%;
+.car-buttons {
+  margin-top: 15px;
+}
+
+.badge {
+  background-color: #ff8f00;
+  position: absolute;
+  top: 16px;
+  left: 13px;
+}
+
+.bi-search {
+  font-weight: lighter;
+  font-size: small;
+  font-style: normal;
 }
 
 .comprar-button {
@@ -207,6 +221,18 @@ h6 {
   flex-direction: row;
 }
 
+/* Filtro */
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(211, 211, 211, 0.289);
+  border: solid 1px rgba(160, 158, 158, 0.145);
+  padding: 10px;
+}
+
 .filter-año,
 .filter-marca,
 .filter-modelo,
@@ -237,6 +263,22 @@ h6 {
   margin-left: 5px;
   padding-left: 5px;
   width: 95%;
+}
+
+.filter-button {
+  color: white;
+  background-color: #ff8f00;
+  border: solid 1px rgb(162, 90, 1);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  width: 160px;
+  height: 30px;
+  margin-left: 5px;
+}
+
+.filter-hr {
+  width: 100%;
 }
 
 /* Sobre Nosotros Section */
@@ -284,21 +326,11 @@ h6 {
   border-radius: 0px;
 }
 
-.car-buttons {
-  margin-top: 15px;
-}
+/* stars */
 
-.badge {
-  background-color: #ff8f00;
-  position: absolute;
-  top: 16px;
-  left: 13px;
-}
-
-.bi-search {
-  font-weight: lighter;
-  font-size: small;
-  font-style: normal;
+.subTitle-container {
+  display: flex;
+  width: 35%;
 }
 
 /* Classes:  
@@ -320,9 +352,3 @@ h6 {
   buttonContacto
   cardsRowContainer
   car-year-price*/
-
-/* stars */
-.subTitle-container {
-  display: flex;
-  width: 35%;
-}
