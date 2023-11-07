@@ -107,7 +107,7 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/brands")
 brandSelector.addEventListener("change", function () {
   fetch(
     "https://ha-front-api-proyecto-final.vercel.app/models?brand=" +
-      brandSelector.value
+    brandSelector.value
   )
     .then(function (res) {
       return res.json();
@@ -128,6 +128,7 @@ brandSelector.addEventListener("change", function () {
     });
 });
 
+
 // Years
 
 for (let i = 2023; i >= 1900; i--) {
@@ -135,6 +136,8 @@ for (let i = 2023; i >= 1900; i--) {
   option.text = i;
   yearSelector.add(option);
 }
+
+
 
 // Modal
 
@@ -157,30 +160,41 @@ const valorInputMessage = document.querySelector(".valueInputMessage");
   console.log(valorInput.value);
 }); */
 
-
-const filterButton = document.querySelector(".filter-button").addEventListener("click", function(){
-  cardColumn.innerHTML =""
-  /* valores de del filtro */
-  let yearsSelect = document.querySelector(".yearsSelect");
- let selectMarcas = document.querySelector(".select-marcas")
- let selectModelos = document.querySelector(".select-modelos")
-let selectEstados = document.querySelector(".select-estados")
-  console.log(yearSelector.value );
-  fetch("https://ha-front-api-proyecto-final.vercel.app/cars?year="+ yearSelector.value+"&brand="+selectMarcas.value+"&model="+selectModelos.value+"&"+"status="+selectEstados.value)
-  .then(function (res) {
-    return res.json();
-  })
-  .then(function (json) {
-    json.forEach((element) => {
-      let contenedorStars = "";
-      for (let i = 0; i < element.rating; i++) {
-        contenedorStars += star;
-      }
-      let contadorRating = 5 - element.rating;
-      for (let i = 0; i < contadorRating; i++) {
-        contenedorStars += starWhite;
-      }
-      cardColumn.innerHTML += `
+const filterButton = document
+  .querySelector(".filter-button")
+  .addEventListener("click", function () {
+    cardColumn.innerHTML = "";
+    /* valores de del filtro */
+    let yearsSelect = document.querySelector(".yearsSelect");
+    let selectMarcas = document.querySelector(".select-marcas");
+    let selectModelos = document.querySelector(".select-modelos");
+    let selectEstados = document.querySelector(".select-estados");
+    console.log(yearSelector.value);
+    fetch(
+      "https://ha-front-api-proyecto-final.vercel.app/cars?year=" +
+        yearSelector.value +
+        "&brand=" +
+        selectMarcas.value +
+        "&model=" +
+        selectModelos.value +
+        "&" +
+        "status=" +
+        selectEstados.value
+    )
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (json) {
+        json.forEach((element) => {
+          let contenedorStars = "";
+          for (let i = 0; i < element.rating; i++) {
+            contenedorStars += star;
+          }
+          let contadorRating = 5 - element.rating;
+          for (let i = 0; i < contadorRating; i++) {
+            contenedorStars += starWhite;
+          }
+          cardColumn.innerHTML += `
 <div class="card mb-3">
 <div class="row d-flex justify-content-center ">
   <div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
@@ -221,13 +235,13 @@ let selectEstados = document.querySelector(".select-estados")
   </div>
 </div>
 </div>`;
-    });
-  })
-  .catch(function (err) {
-    console.log("Error");
+        });
+      })
+      .catch(function (err) {
+        console.log("Error");
+      });
+    /* valores de del filtro */
   });
-  /* valores de del filtro */
-})
 /* filtrado */
 /* año */
 /* año */
