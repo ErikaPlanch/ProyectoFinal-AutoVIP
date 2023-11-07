@@ -164,12 +164,13 @@ const filterButton = document
   .querySelector(".filter-button")
   .addEventListener("click", function () {
     cardColumn.innerHTML = "";
+  
     /* valores de del filtro */
     let yearsSelect = document.querySelector(".yearsSelect");
     let selectMarcas = document.querySelector(".select-marcas");
     let selectModelos = document.querySelector(".select-modelos");
     let selectEstados = document.querySelector(".select-estados");
-    console.log(yearSelector.value);
+  
     fetch(
       "https://ha-front-api-proyecto-final.vercel.app/cars?year=" +
         yearSelector.value +
@@ -185,57 +186,69 @@ const filterButton = document
         return res.json();
       })
       .then(function (json) {
-        json.forEach((element) => {
-          let contenedorStars = "";
-          for (let i = 0; i < element.rating; i++) {
-            contenedorStars += star;
-          }
-          let contadorRating = 5 - element.rating;
-          for (let i = 0; i < contadorRating; i++) {
-            contenedorStars += starWhite;
-          }
-          cardColumn.innerHTML += `
+   
+  if(json==""){
+   cardColumn.innerHTML =`<div class="alert alert-danger" role="alert">
+ No hay autos disponibles
+ </div>`
+  }
+  else{
+    json.forEach((element) => {
+      let contenedorStars = "";
+      for (let i = 0; i < element.rating; i++) {
+        contenedorStars += star;
+      }
+      let contadorRating = 5 - element.rating;
+      for (let i = 0; i < contadorRating; i++) {
+        contenedorStars += starWhite;
+      }
+
+      
+      cardColumn.innerHTML += `
 <div class="card mb-3">
 <div class="row d-flex justify-content-center ">
-  <div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
-    <img
-      src="${element.image}"
-      class="car img-fluid"
-      alt="..."
-    />
-      
-  </div>
-  <div id="contenido-card" class=" col-md-6 col-lg-8 card-info">
-    <div class="card-description">
-    <div  class = "cardDates ">
-    <h5 class="card-title">${element.model}</h5>
-    <div class="subTitle-container d-inline">
-    <p>${element.year} | USD ${element.price_usd} | <p>  ${contenedorStars}</p>
+<div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
+<img
+  src="${element.image}"
+  class="car img-fluid"
+  alt="..."
+/>
   
-     
-    </p>
-  </div>
-    </div>
-     
-    </div>
-      <p class="card-info">${element.description}
-      </p>
-      <div class="card-buttons mt-2">
-        <button class="comprar-button">
-          <i class="bi bi-cart3"> </i>Comprar
-        </button>
-        <button class="info-compartir-buttons">
-          <i class="bi bi-plus-square-dotted"> </i>Más Información
-        </button>
-        <button class="info-compartir-buttons">
-          <i class="bi bi-share-fill"> </i>Compartir
-        </button>
-      </div>
-    </div>
+</div>
+<div id="contenido-card" class=" col-md-6 col-lg-8 card-info">
+<div class="card-description">
+<div  class = "cardDates ">
+<h5 class="card-title">${element.model}</h5>
+<div class="subTitle-container d-inline">
+<p>${element.year} | USD ${element.price_usd} | <p>  ${contenedorStars}</p>
+
+ 
+</p>
+</div>
+</div>
+ 
+</div>
+  <p class="card-info">${element.description}
+  </p>
+  <div class="card-buttons mt-2">
+    <button class="comprar-button">
+      <i class="bi bi-cart3"> </i>Comprar
+    </button>
+    <button class="info-compartir-buttons">
+      <i class="bi bi-plus-square-dotted"> </i>Más Información
+    </button>
+    <button class="info-compartir-buttons">
+      <i class="bi bi-share-fill"> </i>Compartir
+    </button>
   </div>
 </div>
+</div>
+</div>
 </div>`;
-        });
+    });
+  }
+     
+     
       })
       .catch(function (err) {
         console.log("Error");
@@ -246,3 +259,4 @@ const filterButton = document
 /* año */
 /* año */
 /* filtrado */
+
