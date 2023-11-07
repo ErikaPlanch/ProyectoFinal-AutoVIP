@@ -44,7 +44,7 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
   <div id="contenido-card" class=" col-md-6 col-lg-8 card-info">
     <div class="card-description">
     <div  class = "cardDates ">
-    <h5 class="card-title">${element.model}</h5>
+    <h3 class="card-title">${element.model}</h3>
 
     <div class="subTitle-container d-inline">
     <p>${element.year} | USD ${element.price_usd} | <p>  ${contenedorStars}</p>
@@ -65,11 +65,11 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
         <button class="comprar-button">
           <i class="bi bi-cart3"> </i>Comprar
         </button>
-        <button class="info-compartir-buttons">
+        <button class="info-buttons">
           <i class="bi bi-plus-square-dotted"> </i>Más Información
         </button>
-        <button class="info-compartir-buttons">
-          <i class="bi bi-share-fill"> </i>Compartir
+        <button class="compartir-buttons">
+        <i class="bi bi-share-fill"> </i>Compartir
         </button>
       </div>
     </div>
