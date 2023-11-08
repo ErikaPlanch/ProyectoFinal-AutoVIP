@@ -44,13 +44,12 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
   <div class="row d-flex justify-content-center ">
   
     <div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
-    <p id="badgeStatus">Nuevo</p>
+    <span class="badge" id="badgeStatus">Nuevo</span>
       <img
         src="${element.image}"
         class="car img-fluid"
         alt="..."
       />
-        
     </div>
   
     <div id="contenido-card" class=" col-md-6 col-lg-8 card-info">
