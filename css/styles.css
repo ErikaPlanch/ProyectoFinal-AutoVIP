@@ -188,7 +188,6 @@ h6 {
 
 .cardDates {
   display: flex;
-  flex-direction: row;
   background-color: #ffffff;
   justify-content: space-between;
   padding: 2px;
