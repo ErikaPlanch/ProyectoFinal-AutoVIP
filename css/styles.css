@@ -244,6 +244,9 @@ h6 {
 
 .filter-button {
   width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .filter-marca,
@@ -341,20 +344,7 @@ h6 {
   font-size: medium;
 }
 
-@media only screen and (max-width: 600px) {
-  .subTitle-container {
-    font-size: small;
-  }
-  .car {
-    margin: 0;
-    object-fit: cover;
-    width: 100vw;
-  }
-  .card-info {
-    font-size: small;
-  }
-}
-
+/* Móvil S */
 @media only screen and (max-width: 320px) {
   .card-title {
     font-size: large;
@@ -383,6 +373,20 @@ h6 {
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .subTitle-container {
+    font-size: small;
+  }
+  .car {
+    margin: 0;
+    object-fit: cover;
+    width: 100vw;
+  }
+  .card-info {
+    font-size: small;
   }
 }
 
