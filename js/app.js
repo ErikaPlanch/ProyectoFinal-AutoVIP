@@ -8,6 +8,17 @@ const valorActualDeBrand = "";
 
 const DataCards = [];
 
+/* datos para modal detalles */
+let DetalleModel = "";
+/* datos para modal detalles */
+
+function recuperarData(model, brand) {
+  let exampleModalLabel = document.querySelector("#exampleModalLabel");
+  exampleModalLabel.textContent = model;
+  let modalDescription = document.querySelector("#modalDescription");
+  modalDescription.textContent = brand;
+}
+
 const star = `<img src="img/cars_sales/star_rating.svg" alt="Search Icon" />`;
 const starWhite = `<img src="img/cars_sales/star_rating-withe.svg" alt="Search Icon" />`;
 
@@ -27,55 +38,107 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
       for (let i = 0; i < contadorRating; i++) {
         contenedorStars += starWhite;
       }
-
-      cardColumn.innerHTML += `
-<div class="card mb-3">
-<div class="row d-flex justify-content-center ">
-
-  <div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
-    <img
-      src="${element.image}"
-      class="car img-fluid"
-      alt="..."
-    />
-      
-  </div>
-
-  <div id ="contenido-card" class=" col-md-6 col-lg-8 card-info">
-    <div class = "card-description">
-    <div  class = "cardDates ">
-    <h3 class = "card-title">${element.model}</h3>
-
-    <div class="subTitle-container">
-    <p>${element.year} | USD ${element.price_usd} | <p>  ${contenedorStars}</p>
+      if (element.status === 1) {
+        cardColumn.innerHTML += `
+  <div class="card mb-3">
+  <div class="row d-flex justify-content-center ">
   
-
-     
-    </p>
-
-  </div>
+    <div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
+    <p id="badgeStatus">Nuevo</p>
+      <img
+        src="${element.image}"
+        class="car img-fluid"
+        alt="..."
+      />
+        
     </div>
-
-     
-    </div>
-
-      <p class="card-info">${element.description}
+  
+    <div id="contenido-card" class=" col-md-6 col-lg-8 card-info">
+      <div class="card-description">
+      <div  class = "cardDates ">
+      <h3 class="card-title">${element.brand} ${element.model}</h3> 
+  
+      <div class="subTitle-container d-inline">
+      <p>${element.year} | USD ${element.price_usd} | <p>  ${contenedorStars}</p>
+    
+  
+       
       </p>
-      <div class="card-buttons mt-2">
-        <button class="comprar-button">
-          <i class="bi bi-cart3"> </i>Comprar
-        </button>
-        <button class="info-buttons">
-          <i class="bi bi-plus-square-dotted"> </i>Más Información
-        </button>
-        <button class="compartir-buttons">
-        <i class="bi bi-share-fill"> </i>Compartir
-        </button>
+  
+    </div>
+      </div>
+  
+       
+      </div>
+  
+        <p class="card-info">${element.description}
+        </p>
+        <div class="card-buttons mt-2">
+          <button class="comprar-button">
+            <i class="bi bi-cart3"> </i>Comprar
+          </button>
+          <button class="compartir-buttons" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick ="recuperarData('${element.model}','${element.brand}')">
+            <i class="bi bi-plus-square-dotted"> </i>Más Información
+          </button>
+          <button class="compartir-buttons">
+          <i class="bi bi-share-fill"> </i>Compartir
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>`;
+  </div>`;
+      } else {
+        cardColumn.innerHTML += `
+  <div class="card mb-3">
+  <div class="row d-flex justify-content-center ">
+  
+    <div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
+   
+      <img
+        src="${element.image}"
+        class="car img-fluid"
+        alt="..."
+      />
+        
+    </div>
+  
+    <div id="contenido-card" class=" col-md-6 col-lg-8 card-info">
+      <div class="card-description">
+      <div  class = "cardDates ">
+      <h3 class="card-title">${element.brand} ${element.model}</h3>
+  
+      <div class="subTitle-container d-inline">
+      <p>${element.year} | USD ${element.price_usd} | <p>  ${contenedorStars}</p>
+    
+  
+       
+      </p>
+  
+    </div>
+      </div>
+  
+       
+      </div>
+  
+        <p class="card-info">${element.description}
+        </p>
+        <div class="card-buttons mt-2">
+          <button class="comprar-button">
+            <i class="bi bi-cart3"> </i>Comprar
+          </button>
+          <buttonclass="compartir-buttons" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick ="recuperarData('${element.model}','${element.brand}')">
+            <i class="bi bi-plus-square-dotted"> </i>Más Información
+          </button>
+          <button class="compartir-buttons">
+          <i class="bi bi-share-fill"> </i>Compartir
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>`;
+      }
     });
   })
   .catch(function (err) {
@@ -151,7 +214,6 @@ submitButton.addEventListener("click", function () {
     valorInputMail.value === "" ||
     valorInputMessage.value === ""
   ) {
-    
   }
 });
 
@@ -203,47 +265,107 @@ const filterButton = document
               contenedorStars += starWhite;
             }
 
-            cardColumn.innerHTML += `
-<div class="card mb-3">
-<div class="row d-flex justify-content-center ">
-<div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
-<img
-  src="${element.image}"
-  class="car img-fluid"
-  alt="..."
-/>
-  
-</div>
-<div id="contenido-card" class=" col-md-6 col-lg-8 card-info">
-<div class="card-description">
-<div  class = "cardDates ">
-<h5 class="card-title">${element.model}</h5>
-<div class="subTitle-container d-inline">
-<p>${element.year} | USD ${element.price_usd} | <p>  ${contenedorStars}</p>
-
- 
-</p>
-</div>
-</div>
- 
-</div>
-  <p class="card-info">${element.description}
-  </p>
-  <div class="card-buttons mt-2">
-    <button class="comprar-button">
-      <i class="bi bi-cart3"> </i>Comprar
-    </button>
-    <button class="info-compartir-buttons">
-      <i class="bi bi-plus-square-dotted"> </i>Más Información
-    </button>
-    <button class="info-compartir-buttons">
-      <i class="bi bi-share-fill"> </i>Compartir
-    </button>
-  </div>
-</div>
-</div>
-</div>
-</div>`;
+            if (element.status === 1) {
+              cardColumn.innerHTML += `
+        <div class="card mb-3">
+        <div class="row d-flex justify-content-center ">
+        
+          <div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
+          <p id="badgeStatus">Nuevo</p>
+            <img
+              src="${element.image}"
+              class="car img-fluid"
+              alt="..."
+            />
+              
+          </div>
+        
+          <div id="contenido-card" class=" col-md-6 col-lg-8 card-info">
+            <div class="card-description">
+            <div  class = "cardDates ">
+            <h3 class="card-title">${element.brand} ${element.model}</h3>
+        
+            <div class="subTitle-container d-inline">
+            <p>${element.year} | USD ${element.price_usd} | <p>  ${contenedorStars}</p>
+          
+        
+             
+            </p>
+        
+          </div>
+            </div>
+        
+             
+            </div>
+        
+              <p class="card-info">${element.description}
+              </p>
+              <div class="card-buttons mt-2">
+                <button class="comprar-button">
+                  <i class="bi bi-cart3"> </i>Comprar
+                </button>
+                <button class="compartir-buttons" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick ="recuperarData('${element.model}','${element.brand}')">
+                  <i class="bi bi-plus-square-dotted"> </i>Más Información
+                </button>
+                <button class="compartir-buttons">
+                <i class="bi bi-share-fill"> </i>Compartir
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>`;
+            } else {
+              cardColumn.innerHTML += `
+        <div class="card mb-3">
+        <div class="row d-flex justify-content-center ">
+        
+          <div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
+         
+            <img
+              src="${element.image}"
+              class="car img-fluid"
+              alt="..."
+            />
+              
+          </div>
+        
+          <div id="contenido-card" class=" col-md-6 col-lg-8 card-info">
+            <div class="card-description">
+            <div  class = "cardDates ">
+            <h3 class="card-title">${element.brand} ${element.model}</h3>
+        
+            <div class="subTitle-container d-inline">
+            <p>${element.year} | USD ${element.price_usd} | <p>  ${contenedorStars}</p>
+          
+        
+             
+            </p>
+        
+          </div>
+            </div>
+        
+             
+            </div>
+        
+              <p class="card-info">${element.description}
+              </p>
+              <div class="card-buttons mt-2">
+                <button class="comprar-button">
+                  <i class="bi bi-cart3"> </i>Comprar
+                </button>
+                <button  class="compartir-buttons" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick ="recuperarData('${element.model}','${element.brand}')">
+                  <i class="bi bi-plus-square-dotted"> </i>Más Información
+                </button>
+                <button class="compartir-buttons">
+                <i class="bi bi-share-fill"> </i>Compartir
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>`;
+            }
           });
         }
       })
@@ -251,4 +373,3 @@ const filterButton = document
         console.log("Error");
       });
   });
-
