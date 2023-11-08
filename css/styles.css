@@ -327,6 +327,14 @@ h6 {
   border-radius: 0px;
 }
 
+#ErikaPhoto,
+#AlexPhoto,
+#SoffPhoto {
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
+}
+
 /* stars */
 .subTitle-container {
   display: flex;
@@ -399,10 +407,13 @@ h6 {
   logoContainer 
   socialMediaLogos
   submitButton
-  modalForm*/
+  3Form*/
 
 /* ids:
   aboutPhoto
   buttonContacto
   cardsRowContainer
-  car-year-price*/
+  car-year-price
+  ErikaPhoto
+  AlexPhoto
+  SoffPhoto*/

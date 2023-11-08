@@ -41,10 +41,10 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
       
   </div>
 
-  <div id="contenido-card" class=" col-md-6 col-lg-8 card-info">
-    <div class="card-description">
+  <div id ="contenido-card" class=" col-md-6 col-lg-8 card-info">
+    <div class = "card-description">
     <div  class = "cardDates ">
-    <h3 class="card-title">${element.model}</h3>
+    <h3 class = "card-title">${element.model}</h3>
 
     <div class="subTitle-container d-inline">
     <p>${element.year} | USD ${element.price_usd} | <p>  ${contenedorStars}</p>
@@ -107,7 +107,7 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/brands")
 brandSelector.addEventListener("change", function () {
   fetch(
     "https://ha-front-api-proyecto-final.vercel.app/models?brand=" +
-    brandSelector.value
+      brandSelector.value
   )
     .then(function (res) {
       return res.json();
@@ -128,7 +128,6 @@ brandSelector.addEventListener("change", function () {
     });
 });
 
-
 // Years
 
 for (let i = 2023; i >= 1900; i--) {
@@ -136,8 +135,6 @@ for (let i = 2023; i >= 1900; i--) {
   option.text = i;
   yearSelector.add(option);
 }
-
-
 
 // Modal
 
@@ -148,29 +145,34 @@ const valorInputName = document.querySelector(".valorInputName");
 const valorInputMail = document.querySelector(".valorInputMail");
 const valorInputMessage = document.querySelector(".valueInputMessage");
 
-/* submitButton.addEventListener("click", function () {
+submitButton.addEventListener("click", function () {
   if (
     valorInputName.value === "" ||
     valorInputMail.value === "" ||
-    valorInputMessage.value
+    valorInputMessage.value === ""
   ) {
-    alert("Complete todos los campos antes de enviar.");
+    
   }
-  valorInput.value = "";
-  console.log(valorInput.value);
-}); */
+});
+
+window.onbeforeunload = () => {
+  for (const form of document.getElementsByTagName("form")) {
+    form.reset();
+  }
+};
 
 const filterButton = document
   .querySelector(".filter-button")
   .addEventListener("click", function () {
     cardColumn.innerHTML = "";
-  
-    /* valores de del filtro */
+
+    //Valores de el filtro
+
     let yearsSelect = document.querySelector(".yearsSelect");
     let selectMarcas = document.querySelector(".select-marcas");
     let selectModelos = document.querySelector(".select-modelos");
     let selectEstados = document.querySelector(".select-estados");
-  
+
     fetch(
       "https://ha-front-api-proyecto-final.vercel.app/cars?year=" +
         yearSelector.value +
@@ -186,25 +188,22 @@ const filterButton = document
         return res.json();
       })
       .then(function (json) {
-   
-  if(json==""){
-   cardColumn.innerHTML =`<div class="alert alert-danger" role="alert">
+        if (json == "") {
+          cardColumn.innerHTML = `<div class="alert alert-danger" role="alert">
  No hay autos disponibles
- </div>`
-  }
-  else{
-    json.forEach((element) => {
-      let contenedorStars = "";
-      for (let i = 0; i < element.rating; i++) {
-        contenedorStars += star;
-      }
-      let contadorRating = 5 - element.rating;
-      for (let i = 0; i < contadorRating; i++) {
-        contenedorStars += starWhite;
-      }
+ </div>`;
+        } else {
+          json.forEach((element) => {
+            let contenedorStars = "";
+            for (let i = 0; i < element.rating; i++) {
+              contenedorStars += star;
+            }
+            let contadorRating = 5 - element.rating;
+            for (let i = 0; i < contadorRating; i++) {
+              contenedorStars += starWhite;
+            }
 
-      
-      cardColumn.innerHTML += `
+            cardColumn.innerHTML += `
 <div class="card mb-3">
 <div class="row d-flex justify-content-center ">
 <div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
@@ -245,18 +244,11 @@ const filterButton = document
 </div>
 </div>
 </div>`;
-    });
-  }
-     
-     
+          });
+        }
       })
       .catch(function (err) {
         console.log("Error");
       });
-    /* valores de del filtro */
   });
-/* filtrado */
-/* año */
-/* año */
-/* filtrado */
 
