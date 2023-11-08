@@ -171,7 +171,6 @@ brandSelector.addEventListener("change", function () {
   fetch(
     "https://ha-front-api-proyecto-final.vercel.app/models?brand=" +
       brandSelector.value
-      brandSelector.value
   )
     .then(function (res) {
       return res.json();
@@ -215,7 +214,6 @@ submitButton.addEventListener("click", function () {
     valorInputMail.value === "" ||
     valorInputMessage.value === ""
   ) {
-    
   }
 });
 
@@ -252,8 +250,6 @@ const filterButton = document
         return res.json();
       })
       .then(function (json) {
-        if (json == "") {
-          cardColumn.innerHTML = `<div class="alert alert-danger" role="alert">
         if (json == "") {
           cardColumn.innerHTML = `<div class="alert alert-danger" role="alert">
  No hay autos disponibles
@@ -377,4 +373,3 @@ const filterButton = document
         console.log("Error");
       });
   });
-
