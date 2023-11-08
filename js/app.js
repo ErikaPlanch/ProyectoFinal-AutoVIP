@@ -76,7 +76,7 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
           <button class="comprar-button">
             <i class="bi bi-cart3"> </i>Comprar
           </button>
-          <button class="compartir-buttons" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick ="recuperarData('${element.model}','${element.brand}')">
+          <button class="info-buttons" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick ="recuperarData('${element.model}','${element.brand}')">
             <i class="bi bi-plus-square-dotted"> </i>Más Información
           </button>
           <button class="compartir-buttons">
