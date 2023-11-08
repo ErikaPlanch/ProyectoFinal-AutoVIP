@@ -171,6 +171,7 @@ brandSelector.addEventListener("change", function () {
   fetch(
     "https://ha-front-api-proyecto-final.vercel.app/models?brand=" +
       brandSelector.value
+      brandSelector.value
   )
     .then(function (res) {
       return res.json();
@@ -208,24 +209,29 @@ const valorInputName = document.querySelector(".valorInputName");
 const valorInputMail = document.querySelector(".valorInputMail");
 const valorInputMessage = document.querySelector(".valueInputMessage");
 
-/* submitButton.addEventListener("click", function () {
+submitButton.addEventListener("click", function () {
   if (
     valorInputName.value === "" ||
     valorInputMail.value === "" ||
-    valorInputMessage.value
+    valorInputMessage.value === ""
   ) {
-    alert("Complete todos los campos antes de enviar.");
+    
   }
-  valorInput.value = "";
-  console.log(valorInput.value);
-}); */
+});
+
+window.onbeforeunload = () => {
+  for (const form of document.getElementsByTagName("form")) {
+    form.reset();
+  }
+};
 
 const filterButton = document
   .querySelector(".filter-button")
   .addEventListener("click", function () {
     cardColumn.innerHTML = "";
 
-    /* valores de del filtro */
+    //Valores de el filtro
+
     let yearsSelect = document.querySelector(".yearsSelect");
     let selectMarcas = document.querySelector(".select-marcas");
     let selectModelos = document.querySelector(".select-modelos");
@@ -246,6 +252,8 @@ const filterButton = document
         return res.json();
       })
       .then(function (json) {
+        if (json == "") {
+          cardColumn.innerHTML = `<div class="alert alert-danger" role="alert">
         if (json == "") {
           cardColumn.innerHTML = `<div class="alert alert-danger" role="alert">
  No hay autos disponibles
@@ -368,9 +376,5 @@ const filterButton = document
       .catch(function (err) {
         console.log("Error");
       });
-    /* valores de del filtro */
   });
-/* filtrado */
-/* año */
-/* año */
-/* filtrado */
+
