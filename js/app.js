@@ -205,7 +205,9 @@ for (let i = 2023; i >= 1900; i--) {
 const submitButton = document.querySelector(".submitButton");
 const valorInputName = document.querySelector(".valorInputName");
 const valorInputMail = document.querySelector(".valorInputMail");
-const valorInputMessage = document.querySelector(".valueInputMessage");
+const valorInputMessage = document.querySelector(".valorInputMessage");
+const ModalDelModal = document.querySelector("#ModalDelModal");
+const closeButton = document.querySelector(".closeButton");
 
 submitButton.addEventListener("click", function () {
   if (
@@ -213,14 +215,22 @@ submitButton.addEventListener("click", function () {
     valorInputMail.value === "" ||
     valorInputMessage.value === ""
   ) {
+    ModalDelModal.style.display = "block";
   }
 });
 
-window.onbeforeunload = () => {
-  for (const form of document.getElementsByTagName("form")) {
-    form.reset();
+closeButton.addEventListener("click", function () {
+  ModalDelModal.style.display = "";
+});
+
+submitButton.addEventListener("click", function () {
+  console.log(document.getElementsByClassName("inputContactField"));
+  for (const input of document.getElementsByClassName("inputContactField")) {
+    input.value = "";
   }
-};
+});
+
+// Filtro
 
 const filterButton = document
   .querySelector(".filter-button")
