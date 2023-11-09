@@ -124,25 +124,31 @@ h6 {
 
 #badgeStatus {
   background-color: #ff8f00;
+  color: white;
+  font-weight: bolder;
+  font-size: small;
+  height: 23px;
   border: solid 1px rgba(162, 89, 1, 0.512);
-  position: absolute;
   border-radius: 3px;
   padding-top: 1px;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
   padding-right: 6px;
   padding-left: 6px;
-  margin: 20px;
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  z-index: 1;
+}
+
+.car {
+  position: relative;
+  border: solid 1px rgba(89, 89, 89, 0.173);
+  padding: 9px;
+  margin: 15px;
 }
 
 .car-buttons {
   margin-top: 15px;
-}
-
-.badge {
-  background-color: #ff8f00;
-  position: absolute;
-  top: 16px;
-  left: 13px;
 }
 
 .bi-search {
@@ -204,12 +210,6 @@ h6 {
 .card-info {
   font-size: medium;
   margin-top: 10px;
-}
-
-.car {
-  border: solid 1px rgba(89, 89, 89, 0.173);
-  padding: 9px;
-  margin: 15px;
 }
 
 .card {
@@ -341,16 +341,18 @@ h6 {
 /* stars */
 .subTitle-container {
   display: flex;
-  font-size: medium;
 }
 
 /* Móvil S */
 @media only screen and (max-width: 320px) {
-  .card-title {
-    font-size: large;
+  #badgeStatus {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    z-index: 1;
   }
-  .subTitle-container {
-    font-size: smaller;
+  .card-title {
+    font-size: small;
   }
   .comprar-button {
     height: 33px;
@@ -376,9 +378,26 @@ h6 {
   }
 }
 
+@media only screen and (max-width: 425px) {
+  #badgeStatus {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    z-index: 1;
+  }
+}
+
 @media only screen and (max-width: 600px) {
+  #badgeStatus {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    z-index: 1;
+  }
   .subTitle-container {
     font-size: small;
+    display: flex;
+    flex-wrap: wrap;
   }
   .car {
     margin: 0;
@@ -386,15 +405,6 @@ h6 {
     width: 100vw;
   }
   .card-info {
-    font-size: small;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .card-title {
-    font-size: large;
-  }
-  .subTitle-container {
     font-size: small;
   }
 }

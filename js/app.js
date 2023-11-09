@@ -40,7 +40,7 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
       }
       if (element.status === 1) {
         cardColumn.innerHTML += `
-  <div class="card mb-3">
+  <div class="card cars mb-3">
   <div class="row d-flex justify-content-center ">
   
     <div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
@@ -107,7 +107,7 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
       <div  class = "cardDates ">
       <h3 class="card-title">${element.brand} ${element.model}</h3>
   
-      <div class="subTitle-container d-inline">
+      <div class="subTitle-container">
       <p>${element.year} | USD ${element.price_usd} | <p>  ${contenedorStars}</p>
     
   
@@ -270,7 +270,7 @@ const filterButton = document
         <div class="row d-flex justify-content-center ">
         
           <div id="imgDiv" class=" col-sm-10 col-md-4 col-lg-2 col-lg-4">
-          <p id="badgeStatus">Nuevo</p>
+          <span id="badgeStatus">Nuevo</span>
             <img
               src="${element.image}"
               class="car img-fluid"
@@ -284,8 +284,8 @@ const filterButton = document
             <div  class = "cardDates ">
             <h3 class="card-title">${element.brand} ${element.model}</h3>
         
-            <div class="subTitle-container d-inline">
-            <p>${element.year} | USD ${element.price_usd} | <p>  ${contenedorStars}</p>
+            <div class="subTitle-container">
+            <p class="subTitle">${element.year} | USD ${element.price_usd} |  ${contenedorStars}</p>
           
         
              
@@ -303,7 +303,7 @@ const filterButton = document
                 <button class="comprar-button">
                   <i class="bi bi-cart3"> </i>Comprar
                 </button>
-                <button class="compartir-buttons" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick ="recuperarData('${element.model}','${element.brand}')">
+                <button class="info-buttons" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick ="recuperarData('${element.model}','${element.brand}')">
                   <i class="bi bi-plus-square-dotted"> </i>Más Información
                 </button>
                 <button class="compartir-buttons">
